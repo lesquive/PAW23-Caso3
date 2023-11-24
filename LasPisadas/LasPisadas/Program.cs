@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using LasPisadas.Models;
-
+using LasPisadas.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +26,9 @@ builder.Services.AddDbContext<LasPisadasDbContext>(options =>
 {
     options.UseMySql(builder.Configuration.GetConnectionString("LasPisadasDbContext"), new MySqlServerVersion(new Version(8, 0, 25)));
 });
+
+builder.Services.AddScoped<ZapatoCategoriaService>();
+builder.Services.AddScoped<ZapatoService>();
 
 var app = builder.Build();
 
