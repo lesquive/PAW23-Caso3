@@ -29,6 +29,7 @@ builder.Services.AddDbContext<LasPisadasDbContext>(options =>
 
 builder.Services.AddScoped<ZapatoCategoriaService>();
 builder.Services.AddScoped<ZapatoService>();
+builder.Services.AddScoped<TallaService>();
 
 var app = builder.Build();
 

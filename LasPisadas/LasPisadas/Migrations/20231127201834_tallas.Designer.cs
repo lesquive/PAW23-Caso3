@@ -3,6 +3,7 @@ using System;
 using LasPisadas.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LasPisadas.Migrations
 {
     [DbContext(typeof(LasPisadasDbContext))]
-    partial class LasPisadasDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231127201834_tallas")]
+    partial class tallas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

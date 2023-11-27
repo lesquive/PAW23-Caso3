@@ -11,6 +11,7 @@ namespace LasPisadas.Models
 
         public DbSet<Zapato> Zapatos { get; set; }
         public DbSet<ZapatoCategoria> ZapatoCategorias { get; set; }
+        public DbSet<Tallas> Tallas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
